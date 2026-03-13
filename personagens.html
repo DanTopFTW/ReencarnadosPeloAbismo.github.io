@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="" rel="stylesheet">
+
+<head>
+<meta charset="UTF-8">
+<title>PERSONAGENS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<div class="container">
+  <nav class="sumario">
+    <h2>Personagens</h2>
+    <ul>
+      <li><a href="#" data-target="hero">O Grande Herói</a></li>
+    </ul>
+  </nav>
+
+  <div class="painel">
+    <div class="descricao" id="hero">
+    <h3>O Grande Herói</h3>Uma figura lendária cuja existência marca o ponto de virada na história do mundo. Nos tempos antigos, quando a humanidade ainda vivia à sombra de forças superiores e de criaturas que dominavam os continentes, foi ele quem enfrentou e derrotou o Deus Maligno, encerrando uma era de terror e iniciando aquilo que hoje é conhecido como a Era dos Humanos.<br><br>
+        Desde então, sua presença se tornou parte inseparável da própria história do reino humano. Diferente de muitos heróis que desapareceram nas páginas da lenda, O Grande Herói permanece vivo até os dias atuais, atravessando gerações e reinados. Sua longevidade e sabedoria fizeram dele uma figura quase mítica, alguém cuja existência é respeitada tanto quanto temida.<br><br>
+        Ao longo dos séculos, ele assumiu o papel de protetor silencioso da humanidade, auxiliando reis e rainhas que governam o reino humano. Embora raramente intervenha diretamente nos assuntos do mundo, sua orientação estratégica, experiência em batalhas impossíveis e profundo conhecimento das ameaças antigas fazem com que os governantes busquem constantemente seu conselho.<br><br>
+        <img src="npcs/hero.jpg" height="300" width="500"><br><sub>Uma representação artistica da luta do Grande Herói</sub>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.sumario a');
+const descricoes = document.querySelectorAll('.descricao');
+
+// Esconde todas inicialmente
+descricoes.forEach(d => d.style.display = 'none');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    // Esconde todas
+    descricoes.forEach(d => d.style.display = 'none');
+
+    // Mostra a selecionada
+    const targetId = link.getAttribute('data-target');
+    const target = document.getElementById(targetId);
+    if(target) target.style.display = 'block';
+  });
+});
+</script>

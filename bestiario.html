@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="" rel="stylesheet">
+
+<head>
+<meta charset="UTF-8">
+<title>BESTIÁRIO</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<div class="container">
+  <nav class="sumario">
+    <h2>Bestiário</h2>
+    <ul>
+      <li><a href="#" data-target="human">Humano</a></li>
+    </ul>
+  </nav>
+
+  <div class="painel">
+    <div class="descricao" id="human">
+    <h3>『 Humano 』</h3><h4>Tipo: Humano</h4>
+    <h4>Origem e Descrição breve:</h4>Os humanos são a espécie predominante do Continente Mágico. Surgiram na Era do Caos e ganharam notoriedade após a derrota do Deus Maligno por dois de seus heróis, tranzendo consigo a Era dos Humanos
+    <h4>Características:</h4>
+    Alta adaptabilidade a diferentes biomas e condições mágicas.<br>
+    Crescimento populacional acelerado em comparação às demais espécies.<br>
+    Forte capacidade de organização social e política.<br>
+    Tendência à expansão territorial e consolidação de poder.
+    <h4>Habilidades Intrínsecas:</h4>
+    Nenhuma.
+    <h4>Cultura:</h4>
+    Extremamente diversa, variando entre reinos militaristas, teocracias devotas aos Heróis Imortais e nações comerciais expansionistas. Valorizam progresso, legado e linhagem. A história da derrota do Deus Maligno é ensinada como símbolo máximo do potencial humano.
+    <h4>Observações:</h4>
+    São a maioria populacional do continente.<br>
+    Atualmente detêm a maior parte das rotas comerciais e centros acadêmicos.<br>
+    Outras espécies os veem com respeito, cautela ou ressentimento.<br>
+    Apesar da ausência de habilidades intrínsecas, sua capacidade de evolução constante os torna imprevisíveis a longo prazo.<br>
+    <img src="bestiario/humie.jpg" width="250" height="400">
+    </div>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.sumario a');
+const descricoes = document.querySelectorAll('.descricao');
+
+// Esconde todas inicialmente
+descricoes.forEach(d => d.style.display = 'none');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    // Esconde todas
+    descricoes.forEach(d => d.style.display = 'none');
+
+    // Mostra a selecionada
+    const targetId = link.getAttribute('data-target');
+    const target = document.getElementById(targetId);
+    if(target) target.style.display = 'block';
+  });
+});
+</script>

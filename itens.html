@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="" rel="stylesheet">
+
+<head>
+<meta charset="UTF-8">
+<title>ITENS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<div class="container">
+  <nav class="sumario">
+    <h2>Itens</h2>
+    <ul>
+      <li><a href="#" data-target="espfelo">『 Espada de Ferro Longa 』</a></li>
+      <li><a href="#" data-target="espefecu">『 Adaga 』</a></li>
+      <li><a href="#" data-target="macfe">『 Machado de Ferro 』</a></li>
+      <li><a href="#" data-target="matfe">『 Martelo de Ferro 』</a></li>
+      <li><a href="#" data-target="masfe">『 Massa de Ferro 』</a></li>
+      <li><a href="#" data-target="cema">『 Cetro Mágico 』</a></li>
+      <li><a href="#" data-target="manofe">『 Manoplas 』</a></li>
+    </ul>
+  </nav>
+
+  <div class="painel">
+    <div class="descricao" id="espfelo">
+      <h3>『 Espada de Ferro Longa 』</h3>
+        <p>Tipo: Espada longa<br>
+          Dano: 1d8(1d6)+For/Dez Cortante <br>
+          Uma vez por rodada caso esteja usando com as duas mãos você pode fazer um ataque capaz de atingir até três oponentes que estejam juntos.<br>
+        <img src="itens/espadafelon.jpg" width="300">
+    </div>
+    <div class="descricao" id="espefecu">
+      <h3>『 Adaga 』</h3>
+        <p>Tipo: Adaga<br>
+          Dano: 1d6+For/Dez Perfurante <br>
+          Pode ser arremessada em um oponente, causando +1 caso acerte.<br>
+        <img src="itens/espafecu.jpg" width="300">
+    </div>
+    <div class="descricao" id="macfe">
+      <h3>『 Machado de Ferro 』</h3>
+        <p>Tipo: Machado<br>
+          Dano: 1d10(1d8)+For Cortante <br>
+          Uma vez por rodada você pode forçar o oponente a rolar um teste de Fortitude, caso o valor seja menor que sua Aura ele sofre de sangramento por uma rodada.<br>
+        <img src="itens/espachado.jpg" height="300">
+    </div>
+    <div class="descricao" id="matfe">
+      <h3>『 Martelo de Ferro 』</h3>
+      <p>Tipo: Martelo<br>
+        Dano: 1d10(1d8)+For Contundente <br>
+        Uma vez por rodada caso você não cause dano em um golpe com essa arma, você pode causar 1 de dano mesmo assim.<br>
+        <img src="itens/espatelo.jpg" height="300">
+    </div>
+    <div class="descricao" id="masfe">
+      <h3>『 Massa de Ferro 』</h3>
+      <p>Tipo: Massa<br>
+        Dano: 1d8+For contundente <br>
+        Causa +2 Contra mortos vivos, dêmonios e seres das trevas<br>
+        <img src="itens/espamas.jpg" height="300">
+</p>
+    </div>
+    <div class="descricao" id="cema">
+      <h3>『 Cetro Mágico 』</h3>
+      <p>Tipo: Cajado<br>
+        Dano: 1d6+For/Dez Contundente Mágico <br>
+        Magias custam 1 de mana a menos para serem conjuradas<br>
+        <img src="itens/espataff.jpg" width="300">
+</p>
+    </div>
+    <div class="descricao" id="manofe">
+      <h3>『 Manoplas 』</h3>
+      <p>Tipo: Manoplas<br>
+        Dano: 1d6+For Contundente <br>
+        Uma vez por rodada você pode forçar o oponente a rolar um teste de Fortitude, caso o valor seja menor que sua Aura ele fica atordoado por uma rodada.<br>
+        <img src="itens/espauntled.jpg" height="300">
+</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.sumario a');
+const descricoes = document.querySelectorAll('.descricao');
+
+// Esconde todas inicialmente
+descricoes.forEach(d => d.style.display = 'none');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    // Esconde todas
+    descricoes.forEach(d => d.style.display = 'none');
+
+    // Mostra a selecionada
+    const targetId = link.getAttribute('data-target');
+    const target = document.getElementById(targetId);
+    if(target) target.style.display = 'block';
+  });
+});
+</script>
