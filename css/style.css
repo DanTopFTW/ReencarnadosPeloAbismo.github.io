@@ -1,0 +1,135 @@
+
+body {
+    margin: 0;
+    background: url("../ContinenteMagico.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.menu {
+    display: flex;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    background-color: rgba(10, 10, 15, 0.75);
+}
+
+/* LADO ESQUERDO */
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    border-right: 2px solid #333;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #aaa;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 200, 255, 0.8);
+}
+
+/* LADO DIREITO */
+.party {
+    width: 75%;
+    padding: 20px;
+}
+
+.character {
+    display: flex;
+    align-items: center;
+    background: #1c1c24;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #ddd;
+    border: 1px solid #2a2a35;
+    transition: 0.3s;
+}
+
+.character:hover {
+    background: #252535;
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.6);
+}
+
+.character img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #333;
+}
+
+.info h3 {
+    margin: 0;
+}
+
+/* Habilidades */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sumario {
+  width: 250px;
+  color: white;
+  background: rgba(10,10,15,0.85);
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 0 15px rgba(0,200,255,0.6);
+}
+
+.sumario a {
+  display: block;
+  margin: 5px 0;
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sumario a:hover {
+  color: white;
+  text-shadow: 0 0 6px rgba(0,200,255,0.8);
+}
+
+.painel {
+  flex: 1;
+  padding: 30px;
+  color: white;
+  background: rgba(15,15,20,0.85);
+  box-shadow: cyan;
+  overflow-y: auto;
+}
+
+.habilidade {
+  display: none; /* escondido inicialmente */
+  background: rgba(20,20,30,0.9);
+  color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #00c8ff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,200,255,0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.habilidade.show {
+  display: block;
+  opacity: 1;
+}
