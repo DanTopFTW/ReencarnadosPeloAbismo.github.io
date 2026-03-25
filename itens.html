@@ -108,9 +108,6 @@ links.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
 
-    // Esconde todas
-    descricoes.forEach(d => d.style.display = 'none');
-
     // Mostra a selecionada
     const targetId = link.getAttribute('data-target');
     const target = document.getElementById(targetId);
