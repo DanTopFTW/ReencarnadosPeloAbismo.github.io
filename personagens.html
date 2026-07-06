@@ -29,6 +29,75 @@
         <img src="npcs/hero.jpg" height="300" width="500"><br><sub>Uma representação artistica da luta do Grande Herói</sub>
     </div>
     <div class="descricao" id="hunter">
+        <h3>Jaeger Verruk Guaraci</h3> Conhecido por sua incansável caçada em busca de monstros exóticos e extremamente poderosos. Prefere missões que envolvam monstros nunca conhecidos ou até monstros considerados impossíveis de se matar.<br><br>
+        Também é o inventor do atual guia de caçadas, um guia que é atualizado mensalmente e mostra as criaturas fantásticas que Jaeger enfrentou durante suas aventuras. Contendo todo o conhecimento observado, como alimentação, forma de defesa, periodos de acasalamento e muito muito mais. Seu guia também disponibiliza, para assinantes do plano "Caçador Cinco Estrelas",
+        esquemas e planos para que outros caçadores e ferreiros possam produzir armas, armaduras e outros itens a partir dos materiais do monstro. Contendo também recomendações de quais equipamentos, magias e artes usar para cada monstro específico.<br><br>
+    </div>
+    <div class="descricao" id="witch">
+          <h3>Wiss</h3> Uma misteriosa maga, apelidada de bruxa por Jaeger, capaz de conjurar magias de suporte poderosas e fortes o suficiente para resistir quaisquer ataques.<br><br>
+    </div>
+    <div class="descricao" id="gobgob">
+            <h3>Hobie</h3> Filho do antigo líder da vila de goblins e atual líder. Costuma ser um goblin comum. Até que um estranho chegou sem aviso em sua vila e o deu seu nome "Hobie". O transformando em um hobgoblin o dando muito mais força, resistência e o dando a habilidade de tramar planos muito melhores para emboscadas, caças e etc.<br><br>
+      Alguns dias após sua evolução um monstro novo atacou a vila, algo que cuspia fogo e cortava árvores como se fossem papel. Nesta primeira batalha o monstro acabou matando o antigo chefe da vila, assim como alguns de seus guerreiros, deixando a vila em um estado precário.<br><br>
+      O monstro porém, não estava satisfeito e atacou novamente a vila no dia seguinte. Destruindo mais da metade da vila e seus habitantes, em um ato desesperado Hobie enviu um de seus exploradores para a cidade mais próxima em busca da ajuda da Guilda mesmo sabendo que eles não costumam ajudar monstros.<br><br>
+      
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<script>
+const links = document.querySelectorAll('.sumario a');
+const descricoes = document.querySelectorAll('.descricao');
+
+// Esconde todas inicialmente
+descricoes.forEach(d => d.style.display = 'none');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    // Esconde todas
+    descricoes.forEach(d => d.style.display = 'none');
+
+    // Mostra a selecionada
+    const targetId = link.getAttribute('data-target');
+    const target = document.getElementById(targetId);
+    if(target) target.style.display = 'block';
+  });
+});
+</script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="css/style.css" rel="stylesheet">
+
+<head>
+<meta charset="UTF-8">
+<title>PERSONAGENS</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+  <nav class="sumario">
+    <h2>Personagens</h2>
+    <ul>
+      <li><a href="#" data-target="hero">O Grande Herói</a></li>
+      <li><a href="#" data-target="hunter">Jaeger Verruk Guaraci</a></li>
+      <li><a href="#" data-target="witch">Wiss</a></li>
+      <li><a href="#" data-target="gobgob">Hobie</a></li>
+    </ul>
+  </nav>
+
+  <div class="painel">
+    <div class="descricao" id="hero">
+    <h3>O Grande Herói</h3>Uma figura lendária cuja existência marca o ponto de virada na história do mundo. Nos tempos antigos, quando a humanidade ainda vivia à sombra de forças superiores e de criaturas que dominavam os continentes, foi ele quem enfrentou e derrotou o Deus Maligno, encerrando uma era de terror e iniciando aquilo que hoje é conhecido como a Era dos Humanos.<br><br>
+        Desde então, sua presença se tornou parte inseparável da própria história do reino humano. Diferente de muitos heróis que desapareceram nas páginas da lenda, O Grande Herói permanece vivo até os dias atuais, atravessando gerações e reinados. Sua longevidade e sabedoria fizeram dele uma figura quase mítica, alguém cuja existência é respeitada tanto quanto temida.<br><br>
+        Ao longo dos séculos, ele assumiu o papel de protetor silencioso da humanidade, auxiliando reis e rainhas que governam o reino humano. Embora raramente intervenha diretamente nos assuntos do mundo, sua orientação estratégica, experiência em batalhas impossíveis e profundo conhecimento das ameaças antigas fazem com que os governantes busquem constantemente seu conselho.<br><br>
+        <img src="npcs/hero.jpg" height="300" width="500"><br><sub>Uma representação artistica da luta do Grande Herói</sub>
+    </div>
+    <div class="descricao" id="hunter">
         <h3>Jaeger Verruk Guaraci</h3>Uma figura lendária cuja existência marca o ponto de virada na história do mundo. Nos tempos antigos, quando a humanidade ainda vivia à sombra de forças superiores e de criaturas que dominavam os continentes, foi ele quem enfrentou e derrotou o Deus Maligno, encerrando uma era de terror e iniciando aquilo que hoje é conhecido como a Era dos Humanos.<br><br>
         Desde então, sua presença se tornou parte inseparável da própria história do reino humano. Diferente de muitos heróis que desapareceram nas páginas da lenda, O Grande Herói permanece vivo até os dias atuais, atravessando gerações e reinados. Sua longevidade e sabedoria fizeram dele uma figura quase mítica, alguém cuja existência é respeitada tanto quanto temida.<br><br>
         Ao longo dos séculos, ele assumiu o papel de protetor silencioso da humanidade, auxiliando reis e rainhas que governam o reino humano. Embora raramente intervenha diretamente nos assuntos do mundo, sua orientação estratégica, experiência em batalhas impossíveis e profundo conhecimento das ameaças antigas fazem com que os governantes busquem constantemente seu conselho.<br><br>
